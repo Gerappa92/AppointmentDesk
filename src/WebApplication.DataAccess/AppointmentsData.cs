@@ -7,6 +7,8 @@ public class AppointmentsData : IAppointmentsData
 {
     public void CreateAppointment(AppointmentEntity entity)
     {
-        throw new NotImplementedException();
+        // Adds appointment to database
+
+        return;
     }
 }
