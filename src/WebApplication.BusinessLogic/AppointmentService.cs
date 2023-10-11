@@ -3,7 +3,7 @@ using WebApplication.DataAccess.Interfaces;
 
 namespace WebApplication.BusinessLogic;
 
-internal class AppointmentService
+internal class AppointmentService : IAppointmentService
 {
     private readonly IAppointmentsData _appointmentsData;
     private readonly IPatientApi _patientData;
@@ -14,11 +14,11 @@ internal class AppointmentService
         _patientData = patientData ?? throw new ArgumentNullException(nameof(patientData));
     }
 
-    public void Create(CreateAppointmentRequest request)
+    public async Task Create(CreateAppointmentRequest request)
     {
         Validation(request);
 
-        var patient = _patientData.Get(request.PatientId);
+        var patient = await _patientData.Get(request.PatientId);
         
         if (patient == null)
         {
@@ -38,7 +38,7 @@ internal class AppointmentService
         _appointmentsData.CreateAppointment(appointment);
     }
 
-    private void Validation(CreateAppointmentRequest request)
+    private static void Validation(CreateAppointmentRequest request)
     {
         if(request == null)
         {

@@ -8,7 +8,5 @@ public class AppointmentsData : IAppointmentsData
     public void CreateAppointment(AppointmentEntity entity)
     {
         // Adds appointment to database
-
-        return;
     }
 }

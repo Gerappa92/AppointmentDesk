@@ -1,9 +1,15 @@
-var builder = WebApplication.CreateBuilder(args);
+using WebApplication.BusinessLogic;
+using WebApplication.DataAccess;
+
+var builder = Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddBusinessLogic();
+builder.Services.AddDataAccess(builder.Configuration);
 
 var app = builder.Build();
 
