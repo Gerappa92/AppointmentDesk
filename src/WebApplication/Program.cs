@@ -23,12 +23,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapPost("/appointment",(
+app.MapPost("/appointment", async (
     [FromBody] CreateAppointmentRequest body,
     [FromServices] IAppointmentService service 
     ) =>
 {
-    service.Create(body);
+    await service.Create(body);
     return Results.Ok();
     //return Results.Created($"/todoitems/{todoItem.Id}", new TodoItemDTO(todoItem));
 })
