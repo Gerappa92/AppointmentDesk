@@ -6,9 +6,9 @@ namespace WebApplication.BusinessLogic;
 internal class AppointmentService
 {
     private readonly IAppointmentsData _appointmentsData;
-    private readonly IPatientData _patientData;
+    private readonly IPatientApi _patientData;
 
-    public AppointmentService(IAppointmentsData appointmentsData, IPatientData patientData)
+    public AppointmentService(IAppointmentsData appointmentsData, IPatientApi patientData)
     {
         _appointmentsData = appointmentsData ?? throw new ArgumentNullException(nameof(appointmentsData));
         _patientData = patientData ?? throw new ArgumentNullException(nameof(patientData));

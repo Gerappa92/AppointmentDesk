@@ -1,4 +1,6 @@
-﻿namespace WebApplication.DataAccess.Entities;
+﻿using System;
+
+namespace WebApplication.DataAccess.Entities;
 
 public class AppointmentEntity
 {

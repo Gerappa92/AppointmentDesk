@@ -1,9 +1,11 @@
 ﻿using System.Threading.Tasks;
+using Refit;
 using WebApplication.DataAccess.Entities;
 
 namespace WebApplication.DataAccess.Interfaces;
 
-internal interface IPatientData
+public interface IPatientApi
 {
+    [Get("/patient/{id}")]
     Task<PatientEntity> Get(int id);
 }
