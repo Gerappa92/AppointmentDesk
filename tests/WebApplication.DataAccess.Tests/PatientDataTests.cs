@@ -23,8 +23,6 @@ namespace WebApplication.DataAccess.Tests
         private Fixture _fixture;
         private WireMockServer _server;
 
-        //private const string PatientApiUrl = "https://www.MyMedicalClinic.com/PatientService/v1/api/";
-
         [SetUp]
         public void SetUp()
         {
