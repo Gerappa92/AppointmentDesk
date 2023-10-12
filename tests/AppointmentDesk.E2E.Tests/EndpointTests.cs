@@ -75,7 +75,7 @@ internal class EndpointTests : IDisposable
     }
 
     [Test]
-    public async Task CreateAppointment_PatientInternalServerException_ReturnsBadRequest()
+    public async Task CreateAppointment_PatientInternalServerException_ReturnsInternalServerException()
     {
         // Arrange
         var patient = _fixture.Create<PatientEntity>();
@@ -94,7 +94,7 @@ internal class EndpointTests : IDisposable
         _factory.ServerMock.Should().HaveReceivedACall().UsingGet()
             .And.AtUrl($"{_factory.ServerMock.Url}/patient/{patient.Id}");
 
-        httpResponse.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        httpResponse.StatusCode.Should().Be(HttpStatusCode.InternalServerError);
     }
 
     public void Dispose() => _factory.Dispose();

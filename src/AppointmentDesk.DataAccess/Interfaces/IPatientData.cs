@@ -3,7 +3,7 @@ using AppointmentDesk.DataAccess.Entities;
 
 namespace AppointmentDesk.DataAccess.Interfaces;
 
-internal interface IPatientData
+public interface IPatientData
 {
     Task<PatientEntity> Get(int id);
 }

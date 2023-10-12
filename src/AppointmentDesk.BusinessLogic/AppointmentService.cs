@@ -6,9 +6,9 @@ namespace AppointmentDesk.BusinessLogic;
 internal class AppointmentService : IAppointmentService
 {
     private readonly IAppointmentsData _appointmentsData;
-    private readonly IPatientApi _patientData;
+    private readonly IPatientData _patientData;
 
-    public AppointmentService(IAppointmentsData appointmentsData, IPatientApi patientData)
+    public AppointmentService(IAppointmentsData appointmentsData, IPatientData patientData)
     {
         _appointmentsData = appointmentsData ?? throw new ArgumentNullException(nameof(appointmentsData));
         _patientData = patientData ?? throw new ArgumentNullException(nameof(patientData));

@@ -18,7 +18,7 @@ public class PatientDataTests
     private Fixture _fixture;
     private WireMockServer _server;
 
-    [SetUp]
+    [OneTimeSetUp]
     public void SetUp()
     {
         _fixture = new Fixture();
@@ -35,8 +35,6 @@ public class PatientDataTests
     public async Task Get_WithStatusCodeOk_ReceivedAndMapPatient()
     {
         // Arrange
-        const int id = 1;
-        var patientData = CreatePatientData();
         var patient = _fixture.Create<PatientEntity>();
         var patientJson = System.Text.Json.JsonSerializer.Serialize(patient);
 
@@ -44,7 +42,7 @@ public class PatientDataTests
             .Given(
                 Request
                     .Create()
-                    .WithPath($"/patient/{id}")
+                    .WithPath($"/patient/{patient.Id}")
                     .UsingGet()
             )
             .RespondWith(
@@ -54,14 +52,15 @@ public class PatientDataTests
                     .WithBody(patientJson)
             );
 
+        var patientData = CreatePatientData();
+
 
         // Act
-        var result = await patientData.Get(
-            id);
+        var result = await patientData.Get(patient.Id);
 
         // Assert
         _server.Should().HaveReceivedACall().UsingGet()
-            .And.AtUrl($"{_server.Url}/patient/{id}");
+            .And.AtUrl($"{_server.Url}/patient/{patient.Id}");
 
         result.Id.Should().Be(patient.Id);
         result.FirstName.Should().Be(patient.FirstName);
@@ -72,68 +71,61 @@ public class PatientDataTests
     public async Task Get_WithStatusCodeInternalServerError_ThrowsExternalServiceException()
     {
         // Arrange
-        const int id = 1;
-        var patientData = CreatePatientData();
         var patient = _fixture.Create<PatientEntity>();
-        var patientJson = System.Text.Json.JsonSerializer.Serialize(patient);
 
         _server
             .Given(
                 Request
                     .Create()
-                    .WithPath($"/patient/{id}")
+                    .WithPath($"/patient/{patient.Id}")
                     .UsingGet()
             )
             .RespondWith(
                 Response
                     .Create()
                     .WithStatusCode(HttpStatusCode.InternalServerError)
-                    .WithBody(patientJson)
             );
 
+        var patientData = CreatePatientData();
 
         // Act
-        var act = () =>  patientData.Get(
-            id);
+        var act = () =>  patientData.Get(patient.Id);
 
         // Assert
         await act.Should().ThrowAsync<ExternalServiceException>();
 
         _server.Should().HaveReceivedACall().UsingGet()
-            .And.AtUrl($"{_server.Url}/patient/{id}");
+            .And.AtUrl($"{_server.Url}/patient/{patient.Id}");
     }
 
     [Test] public async Task Get_WithStatusCodeNotFound_ReturnNull()
     {
         // Arrange
-        const int id = 1;
-        var patientData = CreatePatientData();
         var patient = _fixture.Create<PatientEntity>();
-        var patientJson = System.Text.Json.JsonSerializer.Serialize(patient);
 
         _server
             .Given(
                 Request
                     .Create()
-                    .WithPath($"/patient/{id}")
+                    .WithPath($"/patient/{patient.Id}")
                     .UsingGet()
             )
             .RespondWith(
                 Response
                     .Create()
                     .WithStatusCode(HttpStatusCode.NotFound)
-                    .WithBody(patientJson)
             );
 
+        var patientData = CreatePatientData();
 
         // Act
-        var result = await patientData.Get(id);
+        var result = await patientData.Get(patient.Id);
 
         // Assert
         result.Should().BeNull();
     }
 
-    [TearDown]
+    [OneTimeTearDown]
     public void TearDown()
     {
         _server.Stop();
