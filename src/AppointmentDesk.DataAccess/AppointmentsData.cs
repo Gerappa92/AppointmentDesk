@@ -1,7 +1,7 @@
-﻿using WebApplication.DataAccess.Entities;
-using WebApplication.DataAccess.Interfaces;
+﻿using AppointmentDesk.DataAccess.Entities;
+using AppointmentDesk.DataAccess.Interfaces;
 
-namespace WebApplication.DataAccess;
+namespace AppointmentDesk.DataAccess;
 
 public class AppointmentsData : IAppointmentsData
 {

@@ -1,7 +1,7 @@
-﻿using WebApplication.DataAccess.Entities;
-using WebApplication.DataAccess.Interfaces;
+﻿using AppointmentDesk.DataAccess.Entities;
+using AppointmentDesk.DataAccess.Interfaces;
 
-namespace WebApplication.BusinessLogic;
+namespace AppointmentDesk.BusinessLogic;
 
 internal class AppointmentService : IAppointmentService
 {
@@ -19,7 +19,7 @@ internal class AppointmentService : IAppointmentService
         Validation(request);
 
         var patient = await _patientData.Get(request.PatientId);
-        
+
         if (patient == null)
         {
             throw new InvalidOperationException("Patient not Found");
@@ -40,12 +40,12 @@ internal class AppointmentService : IAppointmentService
 
     private static void Validation(CreateAppointmentRequest request)
     {
-        if(request == null)
+        if (request == null)
         {
             throw new ArgumentNullException(nameof(request));
         }
 
-        if(request.AppointmentStart < DateTime.UtcNow)
+        if (request.AppointmentStart < DateTime.UtcNow)
         {
             throw new InvalidOperationException("Appointment can't start in the past");
         }

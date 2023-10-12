@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using WebApplication.DataAccess.Entities;
+using AppointmentDesk.DataAccess.Entities;
 
-namespace WebApplication.DataAccess.Interfaces;
+namespace AppointmentDesk.DataAccess.Interfaces;
 
 internal interface IPatientData
 {

@@ -1,4 +1,4 @@
-﻿namespace WebApplication.BusinessLogic;
+﻿namespace AppointmentDesk.BusinessLogic;
 
 public interface IAppointmentService
 {

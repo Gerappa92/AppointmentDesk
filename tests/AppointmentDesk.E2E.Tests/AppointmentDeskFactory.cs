@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using Refit;
-using WebApplication.DataAccess.Interfaces;
+using AppointmentDesk.DataAccess.Interfaces;
 using WireMock.Server;
 
-namespace WebApplication.E2E.Tests;
+namespace AppointmentDesk.E2E.Tests;
 
 internal class AppointmentDeskFactory : WebApplicationFactory<Program>
 {

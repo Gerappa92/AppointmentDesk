@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\WebApplication\WebApplication.csproj" />
+    <ProjectReference Include="..\..\src\AppointmentDesk\AppointmentDesk.csproj" />
   </ItemGroup>
 
 </Project>

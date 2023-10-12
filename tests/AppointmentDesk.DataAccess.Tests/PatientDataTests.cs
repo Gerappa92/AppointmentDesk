@@ -2,15 +2,15 @@
 using AutoFixture;
 using FluentAssertions;
 using Refit;
-using WebApplication.DataAccess.Entities;
-using WebApplication.DataAccess.Exceptions;
-using WebApplication.DataAccess.Interfaces;
+using AppointmentDesk.DataAccess.Entities;
+using AppointmentDesk.DataAccess.Exceptions;
+using AppointmentDesk.DataAccess.Interfaces;
 using WireMock.FluentAssertions;
 using WireMock.RequestBuilders;
 using WireMock.ResponseBuilders;
 using WireMock.Server;
 
-namespace WebApplication.DataAccess.Tests;
+namespace AppointmentDesk.DataAccess.Tests;
 
 [TestFixture]
 public class PatientDataTests

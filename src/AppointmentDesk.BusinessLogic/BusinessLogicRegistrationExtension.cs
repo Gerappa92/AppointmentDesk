@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace WebApplication.BusinessLogic;
+namespace AppointmentDesk.BusinessLogic;
 
 public static class BusinessLogicRegistrationExtension
 {

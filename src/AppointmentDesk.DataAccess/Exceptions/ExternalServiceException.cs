@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WebApplication.DataAccess.Exceptions;
+namespace AppointmentDesk.DataAccess.Exceptions;
 
 public class ExternalServiceException : Exception
 {

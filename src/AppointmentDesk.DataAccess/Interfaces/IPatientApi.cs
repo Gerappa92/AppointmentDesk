@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
+using AppointmentDesk.DataAccess.Entities;
 using Refit;
-using WebApplication.DataAccess.Entities;
 
-namespace WebApplication.DataAccess.Interfaces;
+namespace AppointmentDesk.DataAccess.Interfaces;
 
 public interface IPatientApi
 {

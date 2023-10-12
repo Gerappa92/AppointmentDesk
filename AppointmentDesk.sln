@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0132AE90-185A-4B5A-846D-6DC2893206AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B7537E9D-C634-40ED-9E3F-D453883E74CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppointmentDesk", "src\AppointmentDesk\AppointmentDesk.csproj", "{6CDDFA21-5298-4201-BCF2-2B80B8A3D191}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppointmentDesk.BusinessLogic", "src\AppointmentDesk.BusinessLogic\AppointmentDesk.BusinessLogic.csproj", "{E8082020-8FBA-4151-9A5A-094C705F11D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppointmentDesk.DataAccess", "src\AppointmentDesk.DataAccess\AppointmentDesk.DataAccess.csproj", "{7AECA9EA-5C2D-43F0-BB00-AE4E49C82D25}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppointmentDesk.DataAccess.Tests", "tests\AppointmentDesk.DataAccess.Tests\AppointmentDesk.DataAccess.Tests.csproj", "{353B15A7-03BB-4090-9161-FD0D9457FE49}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppointmentDesk.E2E.Tests", "tests\AppointmentDesk.E2E.Tests\AppointmentDesk.E2E.Tests.csproj", "{A8E4608E-2751-4234-BE41-CC20A42EC405}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CDDFA21-5298-4201-BCF2-2B80B8A3D191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CDDFA21-5298-4201-BCF2-2B80B8A3D191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CDDFA21-5298-4201-BCF2-2B80B8A3D191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CDDFA21-5298-4201-BCF2-2B80B8A3D191}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8082020-8FBA-4151-9A5A-094C705F11D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8082020-8FBA-4151-9A5A-094C705F11D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8082020-8FBA-4151-9A5A-094C705F11D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8082020-8FBA-4151-9A5A-094C705F11D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AECA9EA-5C2D-43F0-BB00-AE4E49C82D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AECA9EA-5C2D-43F0-BB00-AE4E49C82D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AECA9EA-5C2D-43F0-BB00-AE4E49C82D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AECA9EA-5C2D-43F0-BB00-AE4E49C82D25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{353B15A7-03BB-4090-9161-FD0D9457FE49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{353B15A7-03BB-4090-9161-FD0D9457FE49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{353B15A7-03BB-4090-9161-FD0D9457FE49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{353B15A7-03BB-4090-9161-FD0D9457FE49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8E4608E-2751-4234-BE41-CC20A42EC405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E4608E-2751-4234-BE41-CC20A42EC405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E4608E-2751-4234-BE41-CC20A42EC405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E4608E-2751-4234-BE41-CC20A42EC405}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6CDDFA21-5298-4201-BCF2-2B80B8A3D191} = {0132AE90-185A-4B5A-846D-6DC2893206AF}
+		{E8082020-8FBA-4151-9A5A-094C705F11D2} = {0132AE90-185A-4B5A-846D-6DC2893206AF}
+		{7AECA9EA-5C2D-43F0-BB00-AE4E49C82D25} = {0132AE90-185A-4B5A-846D-6DC2893206AF}
+		{353B15A7-03BB-4090-9161-FD0D9457FE49} = {B7537E9D-C634-40ED-9E3F-D453883E74CE}
+		{A8E4608E-2751-4234-BE41-CC20A42EC405} = {B7537E9D-C634-40ED-9E3F-D453883E74CE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {013174C2-719F-44DE-8965-FFC47B55ED68}
+	EndGlobalSection
+EndGlobal

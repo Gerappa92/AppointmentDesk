@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WebApplication.DataAccess.Entities;
+namespace AppointmentDesk.DataAccess.Entities;
 
 public class AppointmentEntity
 {

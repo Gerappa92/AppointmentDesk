@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\WebApplication.DataAccess\WebApplication.DataAccess.csproj" />
+    <ProjectReference Include="..\..\src\AppointmentDesk.DataAccess\AppointmentDesk.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

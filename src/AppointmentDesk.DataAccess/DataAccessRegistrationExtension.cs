@@ -1,10 +1,10 @@
 ﻿using System;
+using AppointmentDesk.DataAccess.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Refit;
-using WebApplication.DataAccess.Interfaces;
 
-namespace WebApplication.DataAccess;
+namespace AppointmentDesk.DataAccess;
 
 public static class DataAccessRegistrationExtension
 {
