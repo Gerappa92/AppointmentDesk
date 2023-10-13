@@ -7,5 +7,5 @@ namespace AppointmentDesk.DataAccess.Interfaces;
 public interface IPatientApi
 {
     [Get("/patient/{id}")]
-    Task<PatientEntity> Get(int id);
+    Task<ApiResponse<PatientEntity>> Get(int id);
 }
